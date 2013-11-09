@@ -38,7 +38,7 @@ let mapleader=","
 
 " ============== Pathogen Initialization =============
 
-execute pathogen#infect()
+" execute pathogen#infect()
 
 " =============== Vundle Initialization ===============
 
@@ -120,24 +120,6 @@ set scrolloff=8         "Start scrolling when we're 8 lines away from margins
 set sidescrolloff=15
 set sidescroll=1
 
-" ================ Colors ========================
-
-syntax enable
-set background=light
-colorscheme solarized
-"let g:solarized_termcolors=256
-if !has('gui_running')
-    " Compatibility for Terminal
-    let g:solarized_termtrans=1
-
-    if (&t_Co >= 256 || $TERM == 'xterm-256color')
-        " Do nothing, it handles itself.
-    else
-        " Make Solarized use 16 colors for Terminal support
-        let g:solarized_termcolors=16
-    endif
-endif
-
 " ================ Enable pasting code ===========
 
 set pastetoggle=<Leader>p
@@ -155,7 +137,7 @@ nmap Q gqap
 " ================ Vundle ========================
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
-Bundle 'gmarik/vundle'
+"Bundle 'gmarik/vundle'
 Bundle 'altercation/vim-colors-solarized'
 Bundle 'git://git.wincent.com/command-t.git'
 "Bundle 'scrooloose/nerdcommenter'
@@ -175,3 +157,21 @@ set laststatus=2
 let g:airline_powerline_fonts = 1
 let g:SexyScroller_EasingStyle = 1
 let g:SexyScroller_ScrollTime = 20
+
+" ================ Colors ========================
+
+syntax enable
+set background=light
+colorscheme solarized
+"let g:solarized_termcolors=256
+if !has('gui_running')
+    " Compatibility for Terminal
+    let g:solarized_termtrans=1
+
+    if (&t_Co >= 256 || $TERM == 'xterm-256color')
+        " Do nothing, it handles itself.
+    else
+        " Make Solarized use 16 colors for Terminal support
+        let g:solarized_termcolors=16
+    endif
+endif
