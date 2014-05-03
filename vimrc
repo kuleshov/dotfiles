@@ -1,4 +1,4 @@
-" Use Vim settings, rather then Vi settings (much better!).
+
 " This must be first, because it changes other options as a side effect.
 set nocompatible
 
@@ -108,9 +108,9 @@ set wildignore+=*.png,*.jpg,*.gif
 set ignorecase    " ignore case when searching
 set smartcase     " ignore case if search pattern is all lowercase,
                   "    case-sensitive otherwise
-set hlsearch      " highlight search terms
+" set hlsearch      " highlight search terms
 set incsearch     " show search matches as you type
-nmap <silent> ,/ :nohlsearch<CR>
+nmap <silent> ,s :nohlsearch<CR>
                   " ^ untoggle current search highlight
 
 " ================ Scrolling ========================
@@ -148,14 +148,21 @@ Bundle 'Shougo/neocomplcache.vim'
 Bundle 'bling/vim-airline'
 " Bundle 'terryma/vim-smooth-scroll'
 Bundle 'joeytwiddle/sexy_scroller.vim'
+Bundle "MarcWeber/vim-addon-mw-utils"
+Bundle "tomtom/tlib_vim"
+Bundle "garbas/vim-snipmate"
+Bundle "honza/vim-snippets"
 
 " ================ Bundle Config ================
 let g:neocomplcache_enable_at_startup = 1
 nmap <silent> <Leader>t :CtrlP<CR>
 set laststatus=2
 let g:airline_powerline_fonts = 1
-let g:SexyScroller_EasingStyle = 1
-let g:SexyScroller_ScrollTime = 20
+"let g:SexyScroller_EasingStyle = 1
+"let g:SexyScroller_ScrollTime = 20
+let g:SexyScroller_ScrollTime = 0
+nmap <Leader>/ gcc
+let g:neocomplcache_enable_auto_select = 1
 
 " ================ Colors ========================
 
