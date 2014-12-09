@@ -23,12 +23,14 @@ alias whale='ssh -A kuleshov@whale2.moleculo.com'
 alias hek='ssh -A kuleshov@hek'
 
 if [ `hostname` = hemmingway ]
+then
   export PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
   export PATH="/Applications/Postgres93.app/Contents/MacOS/bin:$PATH"
 
   ### Added by the Heroku Toolbelt
   export PATH="/usr/local/heroku/bin:$PATH"
 elif [ `hostname` = hek ]
+then
   ## hek-specific
   export PYTHONPATH="$PYTHONPATH:/home/kuleshov/lib"
   export PATH="$PATH:~/bin:/sw/bin"

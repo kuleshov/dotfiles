@@ -17,4 +17,3 @@ cp -r ./vim ~/.vim
 # source them:
 source ~/.bashrc
 source ~/.bash_profile
-source ~/.inputrc
