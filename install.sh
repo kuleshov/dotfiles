@@ -17,3 +17,9 @@ cp -r ./vim ~/.vim
 # source them:
 source ~/.bashrc
 source ~/.bash_profile
+
+# install vundle plugins
+vim +BundleInstall +qall
+
+# copy snippets folder
+cp -r ./snippets/* ~/.vim/bundle/vim-snippets/snippets/
