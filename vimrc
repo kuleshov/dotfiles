@@ -18,10 +18,6 @@ set gcr=a:blinkon0              "Disable cursor blink
 set visualbell                  "No sounds
 set autoread                    "Reload files changed outside vim
 
-nnoremap <Leader>z <C-O>
-nnoremap <Leader>x <C-I>
-nnoremap ; :
-
 " This makes vim act like all other editors, buffers can
 " exist in the background without being in a window.
 " http://items.sjbach.com/319/configuring-vim-right
@@ -34,7 +30,11 @@ syntax on
 " That means all \x commands turn into ,x
 " The mapleader has to be set before vundle starts loading all 
 " the plugins.
-let mapleader=","
+" let mapleader=","
+
+nnoremap <Leader><Up> <C-O>
+nnoremap <Leader><Down> <C-I>
+nnoremap ; :
 
 " ============== Pathogen Initialization =============
 
@@ -157,12 +157,18 @@ Bundle "honza/vim-snippets"
 let g:neocomplcache_enable_at_startup = 1
 nmap <silent> <Leader>t :CtrlP<CR>
 set laststatus=2
-let g:airline_powerline_fonts = 1
+let g:airline_powerline_fonts = 0
 "let g:SexyScroller_EasingStyle = 1
 "let g:SexyScroller_ScrollTime = 20
 let g:SexyScroller_ScrollTime = 0
 nmap <Leader>/ gcc
+vmap <Leader>/ gc
 let g:neocomplcache_enable_auto_select = 1
+set completeopt=menu
+map <Leader><Leader><Down> <Leader><Leader>j
+map <Leader><Leader><Up> <Leader><Leader>k
+map  / <Plug>(easymotion-sn)
+omap / <Plug>(easymotion-tn)
 
 " ================ Colors ========================
 
