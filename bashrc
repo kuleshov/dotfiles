@@ -35,4 +35,7 @@ then
   export PYTHONPATH="$PYTHONPATH:/home/kuleshov/lib"
   export PATH="$PATH:~/bin:/sw/bin"
   export PERL5LIB="/home/kuleshov/bin/asm/metAMOS-1.5rc2/AMOS/Linux-x86_64/lib/AMOS"
+elif [ `hostname` = scail ]
+then
+  unset SSH_ASKPASS
 fi
