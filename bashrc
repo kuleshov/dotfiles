@@ -39,3 +39,5 @@ elif [ `hostname` = scail ]
 then
   unset SSH_ASKPASS
 fi
+
+alias tfpython='LD_LIBRARY_PATH="$HOME/lib/libc6_2.17/lib/x86_64-linux-gnu/:$HOME/lib/usr/lib64/" $HOME/lib/libc6_2.17/lib/x86_64-linux-gnu/ld-2.17.so `which python`'
