@@ -187,3 +187,11 @@ if !has('gui_running')
         let g:solarized_termcolors=16
     endif
 endif
+
+
+" ================ Syntax ========================
+
+au BufNewFile,BufRead Snakefile set syntax=snakemake
+au BufNewFile,BufRead *.rules set syntax=snakemake
+au BufNewFile,BufRead *.snakefile set syntax=snakemake
+au BufNewFile,BufRead *.snake set syntax=snakemake
