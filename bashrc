@@ -39,3 +39,19 @@ elif [ `hostname` = scail ]
 then
   unset SSH_ASKPASS
 fi
+
+if [ `hostname` = ladon1.stanford.edu ] || [ `hostname` = ladon2.stanford.edu ]
+then
+  alias python='python27'
+fi
+
+if [ `hostname` = nlp.stanford.edu ]
+then
+  source /u/nlp/bin/setup.bash
+fi
+
+if [ `hostname` = atlas2.stanford.edu ]
+then
+  export PATH="$PATH:/usr/local/cuda-7.5/bin"
+  export LD_LIBRARY_PATH="$LD_LIBRARY_PATH:/usr/local/cuda-7.5/lib64"
+fi
