@@ -56,4 +56,16 @@ then
   export LD_LIBRARY_PATH="$LD_LIBRARY_PATH:/usr/local/cuda-7.5/lib64"
 fi
 
-alias tfpython='LD_LIBRARY_PATH="$HOME/lib/libc6_2.17/lib/x86_64-linux-gnu/:$HOME/lib/usr/lib64/" $HOME/lib/libc6_2.17/lib/x86_64-linux-gnu/ld-2.17.so `which python`'
+if [[ `hostname` == atlas* ]]
+then
+  export PATH="$PATH:/usr/local/cuda-8.0/bin"
+  export LD_LIBRARY_PATH="$LD_LIBRARY_PATH:/usr/local/cuda-8.0/lib64"
+  export LD_LIBRARY_PATH="$LD_LIBRARY_PATH:/usr/local/cuda-8.0/extras/CUPTI/lib64"
+fi
+
+if [[ `hostname` == mjolnir* ]]
+then
+  export PATH="$PATH:/usr/local/cuda-7.5/bin"
+  export LD_LIBRARY_PATH="$LD_LIBRARY_PATH:/usr/local/cuda-7.5/lib64"
+  export LD_LIBRARY_PATH="$LD_LIBRARY_PATH:/usr/local/cuda-7.5/extras/CUPTI/lib64"
+fi
