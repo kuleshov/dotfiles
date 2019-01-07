@@ -173,7 +173,7 @@ omap / <Plug>(easymotion-tn)
 " ================ Colors ========================
 
 syntax enable
-set background=light
+set background=dark
 colorscheme solarized
 "let g:solarized_termcolors=256
 if !has('gui_running')
